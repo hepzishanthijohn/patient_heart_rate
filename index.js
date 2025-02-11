@@ -15,15 +15,18 @@ const app = express();
 
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
-  res.send(`Patient heart rate checking
-    for registration => use : "POST/api/users/register
-    for login => use : POST/api/users/login
-    for create patients => use : POST/api/patients/patients
-    for getting all patients details =>use : GET/api/patients/patients
-    for creating the heartRate of patients => use: POST/api/heartRates
-    for getting the heartRate of patiens => use: GET/api/heartRates/:patientId
+  res.send(`
+    Patient heart rate checking:
     
-    BEFORE CREATING OR VIEW THE PATIENT MUST BE LOGIN`);
+    - To register a user: POST /api/users/register
+    - To login: POST /api/users/login
+    - To create patients: POST /api/patients/patients
+    - To get all patients' details: GET /api/patients/patients
+    - To create a patient's heart rate: POST /api/heartRates
+    - To get a patient's heart rate: GET /api/heartRates/:patientId
+    
+    NOTE: Before creating or viewing patient details, you must be logged in.
+  `);
 });
 
 // Routes
