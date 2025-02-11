@@ -1,20 +1,6 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "api/server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/patients",
-        "dest": "/api/server.js"
-      },
-      {
-        "src": "/api/heartRate",
-        "dest": "/api/server.js"
-      }
+    "builds": [{"src":"./server.js", "use":"@vercel/node"}],
+    "routes":[
+        {"src":"/(.*)", "dest":"/"}
     ]
-  }
-  
+}
