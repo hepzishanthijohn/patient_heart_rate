@@ -6,8 +6,8 @@ This API allows users to register, login, manage patients, and record/get heart 
 
 - **POST** `/api/users/register`: Register a new user.
 - **POST** `/api/users/login`: Log in and receive a JWT token.
-- **POST** `/api/patients`: Create a new patient.
-- **GET** `/api/patients`: Get all patients for the logged-in user.
+- **POST** `/api/patients/patients`: Create a new patient.
+- **GET** `/api/patients/patients`: Get all patients for the logged-in user.
 - **POST** `/api/heartRates`: Create a heart rate record for a patient.
 - **GET** `/api/heartRates/:patientId`: Get the heart rate record of a specific patient.
 
