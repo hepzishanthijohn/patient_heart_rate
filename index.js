@@ -14,6 +14,9 @@ connectDB();
 const app = express();
 
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+  res.send('Patient heart rate checking');
+});
 
 // Routes
 app.use('/api/users', userRoutes);  // Use authRoutes here
